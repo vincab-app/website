@@ -1,5 +1,4 @@
-import { NavLink } from "react-router-dom";
-
+import mockup from '../assets/mockup.png';
 export default function Hero() {
   return (
     <section className="pt-32 pb-20 bg-gradient-to-br from-blue-400 to-blue-600 text-white">
@@ -12,24 +11,24 @@ export default function Hero() {
             Fast, safe, and affordable rides at your fingertips.
           </p>
           <div className="flex gap-4">
-            <NavLink
-              to="#download"
-              className="bg-white text-yellow-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100"
+            <a
+              href="#download"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100"
             >
               Download App
-            </NavLink>
-            <NavLink
-              to="#how"
+            </a>
+            <a
+              href="#how"
               className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600"
             >
               How it Works
-            </NavLink>
+            </a>
           </div>
         </div>
 
         <div className="hidden md:block">
           <img
-            src="/mockup.png"
+            src={mockup}
             alt="VinCab App"
             className="rounded-2xl shadow-2xl"
           />

@@ -1,3 +1,7 @@
+import { NavLink } from "react-router-dom";
+import playstore from "../assets/playstore.png";
+import appstore from "../assets/appstore.png";
+
 export default function Download() {
   return (
     <section
@@ -12,12 +16,33 @@ export default function Download() {
       </p>
 
       <div className="flex justify-center gap-6">
-        <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">
-          Google Play
-        </button>
-        <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">
-          App Store
-        </button>
+        {/* GOOGLE PLAY */}
+        <NavLink
+          to="#download"
+          className="flex items-center justify-center
+                     h-16 w-44 md:h-20 md:w-52 lg:h-24 lg:w-60
+                     hover:opacity-90 transition"
+        >
+          <img
+            src={playstore}
+            alt="Get it on Google Play"
+            className="max-h-full max-w-full object-contain"
+          />
+        </NavLink>
+
+        {/* APP STORE */}
+        <NavLink
+          to="#download"
+          className="flex items-center justify-center
+                     h-16 w-44 md:h-20 md:w-52 lg:h-24 lg:w-60
+                     hover:opacity-90 transition"
+        >
+          <img
+            src={appstore}
+            alt="Download on the App Store"
+            className="max-h-full max-w-full object-contain"
+          />
+        </NavLink>
       </div>
     </section>
   );
